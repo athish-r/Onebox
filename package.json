@@ -1,11 +1,12 @@
 {
-  "name": "onebox",
+  "name": "assignment-r",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,16 +14,21 @@
   "dependencies": {
     "@elastic/elasticsearch": "^9.1.1",
     "axios": "^1.12.2",
+    "body-parser": "^2.2.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "imapflow": "^1.0.200",
     "mailparser": "^3.7.5",
-    "openai": "^6.4.0"
+    "node-html-parser": "^7.0.1",
+    "openai": "^6.4.0",
+    "pino": "^10.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
-    "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2",
+    "@types/mailparser": "^3.4.6",
+    "@types/node": "^24.8.1",
+    "pino-pretty": "^13.1.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
 }
